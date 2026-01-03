@@ -122,7 +122,7 @@ hr{
 }
 .profile-card{
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     margin-left: 400px;
     margin-right: 400px;
     border: 2px solid #409cff;
@@ -150,23 +150,26 @@ i{
 .Skills h3{
     text-align: center;
     margin-left: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
     font-size: 35px;
 }
 .Skills{
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 .skills-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    margin-top: 50px;
 }
 .skills-category{
     border: 2px solid #409cff;
     border-radius: 10px;
     padding: 20px;
     width: 350px;
+    margin: 10px;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -203,3 +206,44 @@ i{
     border: 1.2px solid #004c8b;
     border-radius: 5px;
 }
+/* Experience Section */
+.experience h3{
+    text-align: center;
+    margin-left: 300px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 35px;
+}
+.experience{
+    margin-bottom: 50px;
+}
+.experience-item{
+    border: 2px solid #409cff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    transition: all 0.3s ease;
+}
+.experience-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(6, 73, 243, 0.5);
+    color: #fff; 
+}
+.experience-item h4{
+    margin-bottom: 10px;
+    color: #b8c5d6;
+    font-size: 25px;
+}
+.experience-item p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+.experience-item ul{
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+/* Project Section */
