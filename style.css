@@ -80,8 +80,7 @@ hr{
     position: relative;
     overflow: hidden;
     margin: 10px;
-}
-        
+}  
 .btn::before{
     position: absolute;
     top: 50%;
@@ -108,7 +107,6 @@ hr{
     margin-left: 300px;
     margin-bottom: 30px;
     font-size: 30px;
-    /* margin-top: 30px; */
 }
 .about-contact-section p{
     font-size: 18px;
@@ -118,13 +116,13 @@ hr{
 }
 .about-contact-section h4{
     color: #b8c5d6;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     margin-bottom: 20px;
 }
 .profile-card{
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     margin-left: 400px;
     margin-right: 400px;
     border: 2px solid #409cff;
@@ -138,6 +136,7 @@ hr{
 .contact-item{
     align-items: left;
     margin-left: 40px;
+    font-size: 18px;
 }
 .profile-card:hover{
     transform: translateY(-5px);
@@ -146,4 +145,61 @@ hr{
 }
 i{
     margin-right: 10px;
+}
+/* Skills Section */
+.Skills h3{
+    text-align: center;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+.Skills{
+    margin-bottom: 100px;
+}
+.skills-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.skills-category{
+    border: 2px solid #409cff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.skills-category h4{
+    margin-bottom: 15px;
+    color: #b8c5d6;
+    font-size: 25px;
+}
+.skills-category ul{
+    list-style-type: none;
+    text-align: left;
+    font-size: 18px;
+}
+.skills-category ul li{
+    margin: 10px 2px;
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1.5px solid #409cff;
+    border-radius: 10px;
+}
+.skills-category:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(6, 73, 243, 0.5);
+    color: #fff; 
+}
+.skills-category ul li:hover{
+    background: linear-gradient(135deg, #9ebeef, #004c8b);
+    color: #000000;
+    transition: all 0.3s, color 0.3s;
+}
+.border{
+    width: 20%;
+    margin: 3px auto 30px auto;
+    border: 1.2px solid #004c8b;
+    border-radius: 5px;
 }
