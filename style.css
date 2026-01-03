@@ -5,7 +5,7 @@
 }
 body{
     background: linear-gradient(135deg, #000000, #434343);
-    color: White;
+    color: #ffffff;
     font-family:serif;
     scroll-behavior: smooth;
 }
@@ -13,7 +13,7 @@ body{
     font-size: 20px;
 }
 h3{
-    color: #b8c5d6;
+    color: hsl(214, 27%, 78%);
     margin-right: 300px;
     margin-left: 10px;
     font-size: 20px;
@@ -53,12 +53,14 @@ h3{
 .Hero-section h3{
     font-size: 40px;
     margin: 150px 200px 20px 200px;
-    text-shadow: 0 0 10px #a9aab8;;
+    text-shadow: 0 0 10px #a9aab8;
+    color: hsl(214, 27%, 78%);
 }
 .Hero-section p{
     font-size: 20px;
     margin: 30px 200px;
     margin-bottom: 60px;
+    color: #ffffff;
 }
 hr{
     width: 25%;
@@ -67,28 +69,44 @@ hr{
     border-radius: 5px;
 }
 .btn{
-    background: rgba(64, 156, 255, 0.1);
+    background: transparent;
     border-radius: 5px;
-    border: 2px solid #409cff;
-    color: #fff;
+    border: 2px solid #409cff !important;
+    color: #ffffff !important;
     cursor: pointer;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 15px 40px !important;
     font-size: 20px;
     letter-spacing: 2px;
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
     margin: 10px;
+    display: inline-block;
 }  
 .btn::before{
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     width: 0;
     height: 0;
+    background: rgba(64, 156, 255, 0.3);
     transform: translate(-50%, -50%);
     transition: width 0.6s, height 0.6s;
+    border-radius: 50%;
+    z-index: -1;
+}        
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+        
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(6, 73, 243, 0.5);
+    color: #fff; 
+    background: rgba(64, 156, 255, 0.3);
 }        
 .btn:hover::before {
     width: 300px;
@@ -107,12 +125,14 @@ hr{
     margin-left: 300px;
     margin-bottom: 30px;
     font-size: 30px;
+    color: hsl(214, 27%, 78%);
 }
 .about-contact-section p{
     font-size: 18px;
     margin: 20px 200px 10px 200px;
     text-align: justify;
     line-height: 1.6;
+    color: #ffffff;
 }
 .about-contact-section h4{
     color: #b8c5d6;
@@ -137,6 +157,7 @@ hr{
     align-items: left;
     margin-left: 40px;
     font-size: 18px;
+    color: #ffffff;
 }
 .profile-card:hover{
     transform: translateY(-5px);
@@ -153,6 +174,7 @@ i{
     margin-bottom: 25px;
     margin-top: 25px;
     font-size: 35px;
+    color: hsl(214, 27%, 78%);
 }
 .Skills{
     margin-bottom: 25px;
@@ -189,6 +211,7 @@ i{
     display: inline-block;
     border: 1.5px solid #409cff;
     border-radius: 10px;
+    color: #ffffff;
 }
 .skills-category:hover{
     transform: translateY(-5px);
@@ -213,6 +236,7 @@ i{
     margin-bottom: 25px;
     margin-top: 25px;
     font-size: 35px;
+    color: hsl(214, 27%, 78%);
 }
 .experience{
     margin-bottom: 50px;
@@ -239,6 +263,10 @@ i{
 .experience-item p{
     font-size: 18px;
     line-height: 1.6;
+    color: #ffffff;
+}
+.experience-item span{
+    color: #ffffff;
 }
 .experience-item ul{
     margin-top: 10px;
@@ -246,4 +274,113 @@ i{
     padding-left: 20px;
     line-height: 1.5;
 }
+.experience-item ul li{
+    color: #ffffff;
+}
+.experience-item em{
+    color: #ffffff;
+}
 /* Project Section */
+.Projects h3{
+    text-align: center;
+    margin-left: 300px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 35px;
+    color: #b8c5d6;
+}
+.carousel {
+    padding: 40px 0;
+    margin-bottom: 50px;
+}
+.carousel-inner {
+    padding: 0;
+}
+.carousel-item {
+    padding: 30px 50px;
+}
+.carousel-item > div {
+    border: #409cff 2px solid;
+    border-radius: 10px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+.carousel-item > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(6, 73, 243, 0.5);
+}
+.carousel-item h3 {
+    color: hsl(214, 27%, 78%);
+    margin-bottom: 20px;
+    font-size: 28px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.carousel-item em {
+    color: #7d99b8;
+}
+.carousel-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+.carousel-item ul li {
+    padding-left: 0;
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #ffffff;
+}
+.carousel-item ul li strong {
+    color: #409cff;
+}
+.carousel-item a{
+    color: #ffffff;
+}
+.carousel-indicators {
+    bottom: -20px;
+}
+.carousel-indicators button {
+    background-color: #409cff;
+    border-radius: 50%;
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgba(64, 156, 255, 0.5);
+}
+.carousel-indicators .active {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(64, 156, 255, 1);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(53%) sepia(98%) saturate(3000%) hue-rotate(190deg);
+    width: 20px;
+    height: 20px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px !important;
+    height: 50px !important;
+    background: rgba(64, 156, 255, 0.2) !important;
+    border: 2px solid #409cff !important;
+    border-radius: 50% !important;
+    top: 50% !important;
+    margin-top: -25px !important;
+    opacity: 0.8 !important;
+    transition: all 0.3s !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1 !important;
+    box-shadow: 0 0 30px rgba(64, 156, 255, 0.8) !important;
+    background: rgba(64, 156, 255, 0.3) !important;
+}
+.carousel-control-prev {
+    left: 10px !important;
+}
+.carousel-control-next {
+    right: 10px !important;
+}

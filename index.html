@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <title>Portfolio</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
                 <a href="#About">About</a>
                 <a href="#Skills">Skills</a>
                 <a href="#experience">Experience</a>
-                <a href="#">Project</a>
+                <a href="#projects">Project</a>
                 <a href="#">Contact</a>
             </nav>
         </div>
@@ -140,5 +141,49 @@
             </ul>
         </div>
     </div>
+    <div class="Projects" id="projects">
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="glass-card">
+                        <h3>Sapphire Digital</h3>
+                        <ul>
+                            <li>Developed fully responsive website for digital invitations featuring custom navigation with mobile friendly hamburger menu and dedicated pages for static, short video, and long video invites</li>
+                            <li>Designed clean grid layouts with pastel color theme prioritizing usability and improved mobile experience across all device types</li>
+                            <li>Implemented semantic HTML5 structure with reusable component architecture ensuring code maintainability and WCAG accessibility compliance</li>
+                            <li>Deployed live production application with continuous integration from GitHub repository</li>
+                            <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, Responsive Design, Git, Netlify</li>
+                        </ul>
+                        <a href="https://sapphire-digital.netlify.app/" target="_blank" class="btn btn-futuristic mt-3">VIEW LIVE</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="glass-card">
+                        <h3>Book Haven E-Commerce <em style="font-size: 0.9em; color: #7d99b8;">- Online Bookstore Frontend</em></h3>
+                        <ul>
+                            <li>Built comprehensive bookstore frontend featuring dynamic catalogue with category filtering, search functionality, and intuitive navigation structure</li>
+                            <li>Implemented interactive shopping cart using vanilla JavaScript with add-to-cart actions, quantity management, price calculations, and cart persistence</li>
+                            <li>Utilized Bootstrap 5 framework for consistent UI components including responsive cards, navigation bars, modals, and form elements with cross-browser compatibility</li>
+                            <li>Designed mobile-first responsive product layouts ensuring seamless user experience from mobile to desktop viewports</li>
+                            <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, Bootstrap 5, Git, Github</li>
+                        </ul>
+                        <a href="https://kananjn45.github.io/book-haven/" target="_blank" class="btn btn-futuristic mt-3">VIEW LIVE</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev" data-bs-ride="false" data-bs-interval="false">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next" data-bs-ride="false" data-bs-interval="false">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+<script src="../Portfolio/Script.js"></script>
 </body>
 </html>
