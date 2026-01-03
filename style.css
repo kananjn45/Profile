@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/04/Solid-Black-Website-Background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(135deg, #000000, #434343);
     color: White;
     font-family:serif;
     scroll-behavior: smooth;
@@ -15,7 +13,7 @@ body{
     font-size: 20px;
 }
 h3{
-    color: white;
+    color: #b8c5d6;
     margin-right: 300px;
     margin-left: 10px;
     font-size: 20px;
@@ -48,22 +46,60 @@ h3{
 
 /* hero-section */
 .Hero-section{
-    display: inline-flex;
-    flex-direction: row;
-    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
-.Hero-section img{
-    margin: 50px 150px;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-}
-.Hero-section img:hover{
-    transform: scale(1.05);
-    box-shadow: #f5f5f5 0px 0px 10px 2px;
+.Hero-section h3{
+    font-size: 40px;
+    margin: 150px 200px 20px 200px;
+    text-shadow: 0 0 10px #a9aab8;;
 }
 .Hero-section p{
-    margin-top: 150px;
-    margin-right: 100px;
-    margin-left: 0px;
-    line-height: 1.8;
+    font-size: 20px;
+    margin: 30px 200px;
+    margin-bottom: 55px;
 }
+hr{
+    width: 25%;
+    margin: 10px auto;
+    border: 2px solid #004c8b;
+    border-radius: 5px;
+}
+.btn{
+    background: rgba(64, 156, 255, 0.1);
+    border-radius: 5px;
+    border: 2px solid #409cff;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+        
+.btn::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}        
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+        
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(6, 73, 243, 0.5);
+    color: #fff; 
+    background: rgba(64, 156, 255, 0.3);
+}
+        
