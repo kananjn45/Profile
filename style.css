@@ -429,3 +429,38 @@ i{
     color: #fff;
 }
 /* Contact section */
+.contact h3{
+    text-align: center;
+    margin-left: 300px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 35px;
+    color: hsl(214, 27%, 78%);
+}
+.contact{
+    margin-bottom: 50px;
+}
+.contact p{
+    font-size: 18px;
+    margin: 20px 300px 10px 400px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #ffffff;
+}
+.contact a{
+    color: #409cff;
+}
+.contact-section{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/* footer */
+.footer{
+    text-align: center;
+    padding: 20px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 16px;
+    border-top: 2px solid #409cff;
+}
