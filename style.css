@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(135deg, #000000, #434343);
+    background: linear-gradient(100deg, #000000, #313131);
     color: #ffffff;
     font-family:serif;
     scroll-behavior: smooth;
@@ -12,11 +12,12 @@ body{
 .header{
     font-size: 20px;
 }
-h3{
+.header h3{
     color: hsl(214, 27%, 78%);
-    margin-right: 300px;
     margin-left: 10px;
-    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 300px;
+    font-size: 30px;
 }
 .nav{
     margin: 20px;  
@@ -44,6 +45,14 @@ h3{
     border-bottom-right-radius: 2px;
 }
 
+h3{
+    font-size: 30px;
+    margin-left: 300px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin: 300px;
+    color: hsl(214, 27%, 78%);
+}
 /* hero-section */
 .Hero-section{
     text-align: center;
@@ -62,11 +71,11 @@ h3{
     margin-bottom: 60px;
     color: #ffffff;
 }
-hr{
+hr .border{
     width: 25%;
     margin: 10px auto;
-    border: 2px solid #004c8b;
-    border-radius: 5px;
+    /* border: 2px solid #004c8b;
+    border-radius: 5px; */
 }
 .btn{
     background: transparent;
@@ -229,63 +238,12 @@ i{
     border: 1.2px solid #004c8b;
     border-radius: 5px;
 }
-/* Experience Section */
-.experience h3{
-    text-align: center;
-    margin-left: 300px;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    font-size: 35px;
-    color: hsl(214, 27%, 78%);
-}
-.experience{
-    margin-bottom: 50px;
-}
-.experience-item{
-    border: 2px solid #409cff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 25px;
-    margin-left: 50px;
-    margin-right: 50px;
-    transition: all 0.3s ease;
-}
-.experience-item:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(6, 73, 243, 0.5);
-    color: #fff; 
-}
-.experience-item h4{
-    margin-bottom: 10px;
-    color: #b8c5d6;
-    font-size: 25px;
-}
-.experience-item p{
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-}
-.experience-item span{
-    color: #ffffff;
-}
-.experience-item ul{
-    margin-top: 10px;
-    list-style-type: none;
-    padding-left: 20px;
-    line-height: 1.5;
-}
-.experience-item ul li{
-    color: #ffffff;
-}
-.experience-item em{
-    color: #ffffff;
-}
 /* Project Section */
 .Projects h3{
     text-align: center;
     margin-left: 300px;
     margin-bottom: 25px;
-    margin-top: 25px;
+    margin-top: 10px;
     font-size: 35px;
     color: #b8c5d6;
 }
@@ -384,3 +342,90 @@ i{
 .carousel-control-next {
     right: 10px !important;
 }
+/* Experience Section */
+.experience h3{
+    text-align: center;
+    margin-left: 300px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 35px;
+    color: hsl(214, 27%, 78%);
+}
+.experience{
+    margin-bottom: 50px;
+}
+.experience-item{
+    border-left: 2px solid #409cff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    transition: all 0.3s ease;
+}
+.experience-item:hover{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 30px rgba(6, 73, 243, 0.5);
+    color: #fff; 
+}
+.experience-item h4{
+    margin-bottom: 10px;
+    color: #b8c5d6;
+    font-size: 25px;
+}
+.experience-item p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+.experience-item span{
+    color: #ffffff;
+}
+.experience-item ul{
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+.experience-item ul li{
+    color: #ffffff;
+}
+.experience-item em{
+    color: #ffffff;
+}
+.education-item ul{
+    list-style-type: "> ";
+}
+.certifications-section{
+    padding: 20px;
+    color: #ffffff;
+    margin: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    transition: all 0.3s ease;
+}
+.certifications-section h4{
+    margin-bottom: 20px;
+    color: #b8c5d6;
+    font-size: 30px;
+}
+.certifications-section ul{
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+.certifications-section ul li{
+    color: #ffffff;
+    border-left: #004c8b 2px solid;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.certifications-section ul li:hover{
+    transform: translateY(3px);
+    box-shadow: 0 10px 30px rgba(6, 73, 243, 0.5);
+    color: #fff;
+}
+/* Contact section */
