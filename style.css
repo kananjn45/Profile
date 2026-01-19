@@ -58,12 +58,12 @@ h3{
 /* hero-section */
 .Hero-section{
     text-align: center;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .Hero-section h3{
     font-size: 40px;
-    margin: 150px 200px 20px 200px;
+    margin: 100px 200px 20px 200px;
     text-shadow: 0 0 10px #a9aab8;
     color: hsl(214, 27%, 78%);
 }
