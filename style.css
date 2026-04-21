@@ -262,11 +262,29 @@ i{
 .carousel-inner {
     padding: 0;
     position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: stretch;
 }
 
 .carousel-item {
     padding: 40px 100px;
-    transition: transform 0.6s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.6s ease-in-out !important;
+    visibility: hidden;
+    will-change: opacity;
+}
+
+.carousel-item.active {
+    opacity: 1 !important;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
 }
 
 .carousel-item > div,

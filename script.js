@@ -113,7 +113,7 @@ const initActiveNavigation = () => {
     });
 };
 
-// Bootstrap Carousel Initialization - FIXED SWIPE
+// Bootstrap Carousel Initialization - FIXED UI DELAY
 const initCarousel = () => {
     // Wait for Bootstrap to load
     if (typeof bootstrap === 'undefined') {
@@ -127,7 +127,7 @@ const initCarousel = () => {
     // Remove auto-play attributes
     carouselEl.removeAttribute('data-bs-ride');
     
-    // Initialize carousel without touch (we handle it manually)
+    // Initialize carousel with proper settings
     const carouselInstance = new bootstrap.Carousel(carouselEl, {
         interval: false,
         ride: false,
@@ -136,11 +136,18 @@ const initCarousel = () => {
         touch: false
     });
     
+    // Force initial active item visibility
+    const activeItem = carouselEl.querySelector('.carousel-item.active');
+    if (activeItem) {
+        activeItem.style.opacity = '1';
+        activeItem.style.visibility = 'visible';
+    }
+    
     // Get control buttons
     const prevBtn = carouselEl.querySelector('.carousel-control-prev');
     const nextBtn = carouselEl.querySelector('.carousel-control-next');
     
-    // Previous button
+    // Previous button click handler
     if (prevBtn) {
         prevBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -149,7 +156,7 @@ const initCarousel = () => {
         });
     }
     
-    // Next button
+    // Next button click handler
     if (nextBtn) {
         nextBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -166,6 +173,25 @@ const initCarousel = () => {
             e.stopPropagation();
             carouselInstance.to(index);
         });
+    });
+    
+    // Handle carousel transitions to ensure proper visibility
+    carouselEl.addEventListener('slide.bs.carousel', (e) => {
+        // Hide all items
+        const items = carouselEl.querySelectorAll('.carousel-item');
+        items.forEach(item => {
+            item.style.opacity = '0';
+            item.style.visibility = 'hidden';
+        });
+    });
+    
+    carouselEl.addEventListener('slid.bs.carousel', (e) => {
+        // Show only active item
+        const activeItem = carouselEl.querySelector('.carousel-item.active');
+        if (activeItem) {
+            activeItem.style.opacity = '1';
+            activeItem.style.visibility = 'visible';
+        }
     });
     
     // Get the carousel inner element for touch handling
