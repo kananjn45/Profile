@@ -113,7 +113,7 @@ const initActiveNavigation = () => {
     });
 };
 
-// Bootstrap Carousel Initialization - FIXED UI DELAY
+// Bootstrap Carousel Initialization
 const initCarousel = () => {
     // Wait for Bootstrap to load
     if (typeof bootstrap === 'undefined') {
@@ -124,9 +124,6 @@ const initCarousel = () => {
     const carouselEl = document.querySelector('#projectCarousel');
     if (!carouselEl) return;
     
-    // Remove auto-play attributes
-    carouselEl.removeAttribute('data-bs-ride');
-    
     // Initialize carousel with proper settings
     const carouselInstance = new bootstrap.Carousel(carouselEl, {
         interval: false,
@@ -136,48 +133,9 @@ const initCarousel = () => {
         touch: false
     });
     
-    // Force initial active item visibility
-    const activeItem = carouselEl.querySelector('.carousel-item.active');
-    if (activeItem) {
-        activeItem.style.opacity = '1';
-        activeItem.style.visibility = 'visible';
-    }
-    
-    // Get control buttons
-    const prevBtn = carouselEl.querySelector('.carousel-control-prev');
-    const nextBtn = carouselEl.querySelector('.carousel-control-next');
-    
-    // Previous button click handler
-    if (prevBtn) {
-        prevBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            carouselInstance.prev();
-        });
-    }
-    
-    // Next button click handler
-    if (nextBtn) {
-        nextBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            carouselInstance.next();
-        });
-    }
-    
-    // Indicator buttons
-    const indicators = carouselEl.querySelectorAll('.carousel-indicators button');
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            carouselInstance.to(index);
-        });
-    });
-    
-    // Handle carousel transitions to ensure proper visibility
+    // Handle carousel transitions for visibility management
     carouselEl.addEventListener('slide.bs.carousel', (e) => {
-        // Hide all items
+        // Hide all items at start of transition
         const items = carouselEl.querySelectorAll('.carousel-item');
         items.forEach(item => {
             item.style.opacity = '0';
@@ -186,7 +144,7 @@ const initCarousel = () => {
     });
     
     carouselEl.addEventListener('slid.bs.carousel', (e) => {
-        // Show only active item
+        // Show active item at end of transition
         const activeItem = carouselEl.querySelector('.carousel-item.active');
         if (activeItem) {
             activeItem.style.opacity = '1';
@@ -198,7 +156,7 @@ const initCarousel = () => {
     const carouselInner = carouselEl.querySelector('.carousel-inner');
     const targetElement = carouselInner || carouselEl;
     
-    // Custom swipe handling - only on carousel content
+    // Custom swipe handling
     let touchStartX = 0;
     let touchStartY = 0;
     let isDragging = false;
@@ -218,17 +176,14 @@ const initCarousel = () => {
             const diffX = Math.abs(touchX - touchStartX);
             const diffY = Math.abs(touchY - touchStartY);
             
-            // If moved more than 5px, determine direction
             if (diffX > 5 || diffY > 5) {
                 hasMoved = true;
-                // If horizontal movement is dominant
                 if (diffX > diffY * 2) {
                     isDragging = true;
                 }
             }
         }
         
-        // Only prevent scroll if horizontal drag is confirmed
         if (isDragging) {
             e.preventDefault();
         }
@@ -239,13 +194,10 @@ const initCarousel = () => {
             const touchEndX = e.changedTouches[0].clientX;
             const diffX = touchStartX - touchEndX;
             
-            // Minimum swipe distance
             if (Math.abs(diffX) > 50) {
                 if (diffX > 0) {
-                    // Swiped left
                     carouselInstance.next();
                 } else {
-                    // Swiped right
                     carouselInstance.prev();
                 }
             }
