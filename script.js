@@ -220,8 +220,8 @@ const createScrollTopButton = () => {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: rgba(64, 156, 255, 0.3);
-        border: 2px solid #409cff;
+        background: #023859;
+        border: 2px solid #54ACBF;
         border-radius: 50%;
         color: #ffffff;
         font-size: 20px;
@@ -273,13 +273,13 @@ const createScrollTopButton = () => {
     });
     
     scrollBtn.addEventListener('mouseenter', () => {
-        scrollBtn.style.background = 'rgba(64, 156, 255, 0.5)';
-        scrollBtn.style.boxShadow = '0 0 30px rgba(64, 156, 255, 0.8)';
+        scrollBtn.style.background = '#023859';
+        scrollBtn.style.boxShadow = '0 0 30px ';
         scrollBtn.style.transform = 'scale(1.1)';
     });
     
     scrollBtn.addEventListener('mouseleave', () => {
-        scrollBtn.style.background = 'rgba(64, 156, 255, 0.3)';
+        scrollBtn.style.background = '#023859';
         scrollBtn.style.boxShadow = 'none';
         scrollBtn.style.transform = 'scale(1)';
     });
