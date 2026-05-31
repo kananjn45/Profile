@@ -7,31 +7,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="icon" href="assets/favicon.ico">
-    <title>Portfolio</title>
+    <title>Profile ✨🌷</title>
 </head>
 <body>
     <div class="header">
         <div class="nav">
             <h3 class="site-title">KJ</h3>
             <nav>
-                <a href="#Home">Home</a>
                 <a href="#About">About</a>
-                <a href="#Skills">Skills</a>
-                <a href="#projects">Project</a>
-                <a href="#experience">Experience</a>
+                <a href="#work">Work</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <button class="inquire-btn">Inquire</button>
         </div>
-        <div class="Hero-section" id="Home">
+        <div class="hero-section content" id="Home">
             <h3>Kanan Jain</h3>
-            <hr>
             <p>Frontend Developer | Data & Web Development Enthusiast</p>
             <a href="#About" class="btn">EXPLORE WORK</a>
             <a href="#contact" class="btn">GET IN TOUCH</a>
         </div>
     </div>
     <div class="about-contact-section">
-        <div class="About-us" id="About">
+        <div class="about-us content-section" id="About">
             <h3>About Me</h3>
             <p> I am a first-year BCA student at the Institute of Information Technology and Management, Delhi, with a strong foundation in frontend development and responsive web design. My journey in technology is driven by a passion for creating user-centric web applications and exploring the intersection of development and data science.</p>
             <p>With expertise in HTML, CSS, JavaScript, and Bootstrap, I build responsive, accessible websites while continuously expanding my skills in Python, data analysis, and AI-assisted development. I thrive in collaborative environments and am eager to apply my development skills in real-world internship opportunities.</p>
@@ -61,173 +58,175 @@
                 </div>
         </div>
     </div>
-    <div class="Skills" id="Skills">
-        <h3>Technical Arsenal</h3>
-        <hr class="border">
-        <div class="skills-container">
-            <div class="skills-category">
-                <h4>Frontend Development</h4>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h4>Web Technologies</h4>
-                <ul>
-                    <li>Responsive Design</li>
-                    <li>CSS Grid</li>
-                    <li>Flexbox</li>
-                    <li>Bootstrap</li>
-                    <li>DOM manipulation</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h4>Data & AI</h4>
-                <ul>
-                    <li>Python</li>
-                    <li>Data Analysis</li>
-                    <li>AI-assisted Development</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h4>Tools & Platforms</h4>
-                <ul>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>VS Code</li>
-                    <li>Netlify</li>
-                    <li>Chrome DevTools</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h4>Design Tools</h4>
-                <ul>
-                    <li>Graphic Design</li>
-                    <li>Digital Asset Creation for Web and Social Media</li>
-                </ul>
-            </div>
-            <div class="skills-category">
-                <h4>Version Control</h4>
-                <ul>
-                    <li>Git workflows</li>
-                    <li>Branching strategies</li>
-                    <li>Merging</li>
-                    <li>Pull Requests</li>
-                    <li>collaborative Development</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="Projects" id="projects">
-        <h3>Projects</h3>
-        <hr class="border">
-        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="glass-card">
-                        <h3>Cognify <em style="font-size: 0.9em; color: #7d99b8;">- AI-Powered Learning Companion</em></h3>
-                        <ul>
-                            <li>Built an intelligent learning platform designed as an AI-powered learning companion for children with developmental disorders</li>
-                            <li>Implemented real-time adaptive math lessons that adjust visuals, sounds, and pacing dynamically based on detected stress levels</li>
-                            <li>Integrated camera-based stress detection system to monitor child's emotional state and provide supportive, confidence-building feedback</li>
-                            <li>Designed child-friendly interface focusing on emotional resilience and personalized learning growth with accessibility in mind</li>
-                            <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, AI/ML, Camera API, Real-time Adaptation, Git, Vercel</li>
-                        </ul>
-                        <a href="https://cognify-fawn.vercel.app/" target="_blank" class="btn btn-futuristic mt-3">VIEW LIVE DEMO</a>
-                    </div>
+    <div id="work" class="work">
+        <div class="Skills" id="Skills">
+            <h3>Technical Arsenal</h3>
+            <hr class="border">
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h4>Frontend Development</h4>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
                 </div>
-                <div class="carousel-item">
-                    <div class="glass-card">
-                        <h3>Sapphire Digital</h3>
-                        <ul>
-                            <li>Developed fully responsive website for digital invitations featuring custom navigation with mobile friendly hamburger menu and dedicated pages for static, short video, and long video invites</li>
-                            <li>Designed clean grid layouts with pastel color theme prioritizing usability and improved mobile experience across all device types</li>
-                            <li>Implemented semantic HTML5 structure with reusable component architecture ensuring code maintainability and WCAG accessibility compliance</li>
-                            <li>Deployed live production application with continuous integration from GitHub repository</li>
-                            <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, Responsive Design, Git, Netlify</li>
-                        </ul>
-                        <a href="https://sapphire-digital.netlify.app/" target="_blank" class="btn btn-futuristic mt-3">VIEW LIVE</a>
-                    </div>
+                <div class="skills-category">
+                    <h4>Web Technologies</h4>
+                    <ul>
+                        <li>Responsive Design</li>
+                        <li>CSS Grid</li>
+                        <li>Flexbox</li>
+                        <li>Bootstrap</li>
+                        <li>DOM manipulation</li>
+                    </ul>
                 </div>
-                <div class="carousel-item">
-                    <div class="glass-card">
-                        <h3>Book Haven E-Commerce <em style="font-size: 0.9em; color: #7d99b8;">- Online Bookstore Frontend</em></h3>
-                        <ul>
-                            <li>Built comprehensive bookstore frontend featuring dynamic catalogue with category filtering, search functionality, and intuitive navigation structure</li>
-                            <li>Implemented interactive shopping cart using vanilla JavaScript with add-to-cart actions, quantity management, price calculations, and cart persistence</li>
-                            <li>Utilized Bootstrap 5 framework for consistent UI components including responsive cards, navigation bars, modals, and form elements with cross-browser compatibility</li>
-                            <li>Designed mobile-first responsive product layouts ensuring seamless user experience from mobile to desktop viewports</li>
-                            <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, Bootstrap 5, Git, Github</li>
-                        </ul>
-                        <a href="https://kananjn45.github.io/book-haven/" target="_blank" class="btn btn-futuristic mt-3">VIEW LIVE</a>
-                    </div>
+                <div class="skills-category">
+                    <h4>Data & AI</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>Data Analysis</li>
+                        <li>AI-assisted Development</li>
+                    </ul>
                 </div>
-                <div class="carousel-item">
-                    <div class="glass-card">
-                        <h3>Climate Change Analysis <em style="font-size: 0.9em; color: #7d99b8;">- Data Visualization Project</em></h3>
-                        <ul>
-                            <li>Developed a comprehensive data visualization dashboard to analyze climate change trends using Python and Pandas</li>
-                            <li>Implemented interactive charts and graphs to display temperature, precipitation, and CO2 concentration data over time</li>
-                            <li>Utilized Matplotlib and Seaborn libraries for creating insightful visualizations of environmental datasets</li>
-                            <li>Designed a user-friendly interface with clear data representations to support informed decision-making on climate issues</li>
-                            <li><strong>Tech:</strong> Python, Pandas, Matplotlib, Git, GitHub</li>
-                        </ul>
-                        <a href="https://github.com/kananjn45/climate-change-analysis" target="_blank" class="btn btn-futuristic mt-3">VIEW ON GITHUB</a>
-                    </div>
+                <div class="skills-category">
+                    <h4>Tools & Platforms</h4>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                        <li>Netlify</li>
+                        <li>Chrome DevTools</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h4>Design Tools</h4>
+                    <ul>
+                        <li>Graphic Design</li>
+                        <li>Digital Asset Creation for Web and Social Media</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h4>Version Control</h4>
+                    <ul>
+                        <li>Git workflows</li>
+                        <li>Branching strategies</li>
+                        <li>Merging</li>
+                        <li>Pull Requests</li>
+                        <li>collaborative Development</li>
+                    </ul>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
-    </div>
-    
-    <div class="experience" id="experience">
-        <h3>Experience & Education</h3>
-        <hr class="border">
-        <div class="experience-item">
-            <h4>Graphic Design Intern - Digital & Web Assets</h4>
-            <span>18 December, 2025 - 31 December, 2025</span>
-            <ul>
-                <li>Creating visual content and marketing materials for non-profit social impact campaigns in ongoing 2-week internship</li>
-                <li>Designing web banners, social media graphics, and digital assets optimized for web platforms using industry-standard design tools</li>
-                <li>Collaborating with cross-functional team members to deliver professional graphics within tight project deadlines and brand guidelines</li>
-            </ul>
+        <div class="Projects" id="projects">
+            <h3>Projects</h3>
+            <hr class="border">
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="glass-card">
+                            <h3>Cognify <em style="font-size: 0.9em; color: #7d99b8;">- AI-Powered Learning Companion</em></h3>
+                            <ul>
+                                <li>Built an intelligent learning platform designed as an AI-powered learning companion for children with developmental disorders</li>
+                                <li>Implemented real-time adaptive math lessons that adjust visuals, sounds, and pacing dynamically based on detected stress levels</li>
+                                <li>Integrated camera-based stress detection system to monitor child's emotional state and provide supportive, confidence-building feedback</li>
+                                <li>Designed child-friendly interface focusing on emotional resilience and personalized learning growth with accessibility in mind</li>
+                                <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, AI/ML, Camera API, Real-time Adaptation, Git, Vercel</li>
+                            </ul>
+                            <a href="https://cognify-fawn.vercel.app/" target="_blank" class="btn btn-futuristic mt-3">VIEW LIVE DEMO</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="glass-card">
+                            <h3>Sapphire Digital</h3>
+                            <ul>
+                                <li>Developed fully responsive website for digital invitations featuring custom navigation with mobile friendly hamburger menu and dedicated pages for static, short video, and long video invites</li>
+                                <li>Designed clean grid layouts with pastel color theme prioritizing usability and improved mobile experience across all device types</li>
+                                <li>Implemented semantic HTML5 structure with reusable component architecture ensuring code maintainability and WCAG accessibility compliance</li>
+                                <li>Deployed live production application with continuous integration from GitHub repository</li>
+                                <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, Responsive Design, Git, Netlify</li>
+                            </ul>
+                            <a href="https://sapphire-digital.netlify.app/" target="_blank" class="btn btn-futuristic mt-3">VIEW LIVE</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="glass-card">
+                            <h3>Book Haven E-Commerce <em style="font-size: 0.9em; color: #7d99b8;">- Online Bookstore Frontend</em></h3>
+                            <ul>
+                                <li>Built comprehensive bookstore frontend featuring dynamic catalogue with category filtering, search functionality, and intuitive navigation structure</li>
+                                <li>Implemented interactive shopping cart using vanilla JavaScript with add-to-cart actions, quantity management, price calculations, and cart persistence</li>
+                                <li>Utilized Bootstrap 5 framework for consistent UI components including responsive cards, navigation bars, modals, and form elements with cross-browser compatibility</li>
+                                <li>Designed mobile-first responsive product layouts ensuring seamless user experience from mobile to desktop viewports</li>
+                                <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, Bootstrap 5, Git, Github</li>
+                            </ul>
+                            <a href="https://kananjn45.github.io/book-haven/" target="_blank" class="btn btn-futuristic mt-3">VIEW LIVE</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="glass-card">
+                            <h3>Climate Change Analysis <em style="font-size: 0.9em; color: #7d99b8;">- Data Visualization Project</em></h3>
+                            <ul>
+                                <li>Developed a comprehensive data visualization dashboard to analyze climate change trends using Python and Pandas</li>
+                                <li>Implemented interactive charts and graphs to display temperature, precipitation, and CO2 concentration data over time</li>
+                                <li>Utilized Matplotlib and Seaborn libraries for creating insightful visualizations of environmental datasets</li>
+                                <li>Designed a user-friendly interface with clear data representations to support informed decision-making on climate issues</li>
+                                <li><strong>Tech:</strong> Python, Pandas, Matplotlib, Git, GitHub</li>
+                            </ul>
+                            <a href="https://github.com/kananjn45/climate-change-analysis" target="_blank" class="btn btn-futuristic mt-3">VIEW ON GITHUB</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
         </div>
-        <div class="experience-item education-item">
-            <h4>Bachelor of Computer Applications (BCA)</h4>
-            <span class="edu"><em>Institute of Information Technology and Management, Delhi | 2025 - 2028</em></span>
-            <ul>
-                <li>First-year student focusing on web technologies, programming fundamentals, data structures, and algorithms</li>
-                <li>Core coursework: HTML, CSS, JavaScript, Python, SQL, database management, software engineering</li>
-                <li>Building strong foundation in responsive web design, DOM manipulation, and problem-solving techniques</li>
-                <li>Actively developing portfolio projects combining frontend development with emerging AI technologies</li>
-            </ul>
+        
+        <div class="experience" id="experience">
+            <h3>Experience & Education</h3>
+            <hr class="border">
+            <div class="experience-item">
+                <h4>Graphic Design Intern - Digital & Web Assets</h4>
+                <span>18 December, 2025 - 31 December, 2025</span>
+                <ul>
+                    <li>Creating visual content and marketing materials for non-profit social impact campaigns in ongoing 2-week internship</li>
+                    <li>Designing web banners, social media graphics, and digital assets optimized for web platforms using industry-standard design tools</li>
+                    <li>Collaborating with cross-functional team members to deliver professional graphics within tight project deadlines and brand guidelines</li>
+                </ul>
+            </div>
+            <div class="experience-item education-item">
+                <h4>Bachelor of Computer Applications (BCA)</h4>
+                <span class="edu"><em>Institute of Information Technology and Management, Delhi | 2025 - 2028</em></span>
+                <ul>
+                    <li>First-year student focusing on web technologies, programming fundamentals, data structures, and algorithms</li>
+                    <li>Core coursework: HTML, CSS, JavaScript, Python, SQL, database management, software engineering</li>
+                    <li>Building strong foundation in responsive web design, DOM manipulation, and problem-solving techniques</li>
+                    <li>Actively developing portfolio projects combining frontend development with emerging AI technologies</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h4>High School Diploma</h4>
+                <span class="edu"><em>Maharaja Agrasen Model School (MAMS), Delhi | 2012-2024</em></span>
+            </div>
         </div>
-        <div class="experience-item">
-            <h4>High School Diploma</h4>
-            <span class="edu"><em>Maharaja Agrasen Model School (MAMS), Delhi | 2012-2024</em></span>
+        <div class="certifications-section">
+                <h4>Certifications</h4>
+                <ul>
+                    <li>Introduction to Data Science - <em>Cisco Networking Academy,</em><span> Dec, 2025</span></li>
+                    <li>Data Science Essentials with Python - <em>Cisco Networking Academy,</em><span> Dec, 2025</span></li>
+                    <li>Cyber Job Simulation - <em>Deloitte Via Forage,</em><span> Oct, 2025</span></li>
+                    <li>AI Tools & ChatGPT Workshop - <em>Be10x,</em><span> April,2025</span></li>
+                </ul>
         </div>
-    </div>
-    <div class="certifications-section">
-            <h4>Certifications</h4>
-            <ul>
-                <li>Introduction to Data Science - <em>Cisco Networking Academy,</em><span> Dec, 2025</span></li>
-                <li>Data Science Essentials with Python - <em>Cisco Networking Academy,</em><span> Dec, 2025</span></li>
-                <li>Cyber Job Simulation - <em>Deloitte Via Forage,</em><span> Oct, 2025</span></li>
-                <li>AI Tools & ChatGPT Workshop - <em>Be10x,</em><span> April,2025</span></li>
-            </ul>
     </div>
     <div class="contact" id="contact">
         <h3>Get in Touch</h3>
