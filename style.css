@@ -1,8 +1,8 @@
-:root{
-    --primary:#121212;
-    --secondary:#4B5694;
-    --tertiary:#7288AE;
-    --neutral:#EAE0CF;
+:root {
+    --primary: #0C0B11;
+    --secondary: #1E1528;
+    --tertiary: #C084B0;
+    --neutral: #EDE6F0;
 }
 *{
     background-color: var(--primary);
@@ -37,7 +37,6 @@
 }
 .nav a:hover{
     border-bottom: 0.1px solid var(--tertiary);
-    /* border-width: 0px; */
 }
 .inquire-btn{
     margin: 0px 20px 10px 300px;
@@ -90,19 +89,48 @@
     background-color: var(--secondary);
 }
 /* About & contact section */
-.about-contact-section{
-    background:linear-gradient(to bottom, var(--primary), var(--secondary));
+#About {                          /* capital A to match your HTML */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 80px;
 }
-.content-section {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 200px;
-  font-weight: bold;
+
+.about-us {
+    flex: 1;
+    min-width: 0;
 }
-.content-section h3{
-    font-size: 80px;
+
+.about-us p {
+    background-color: transparent !important;
+    font-weight: bold;
+    color: var(--tertiary) !important;
+    text-align: justify;
+    padding: 40px 0;
 }
-.content-section p, .content-section h3 {
-  background-color: transparent;
+
+.profile-card {
+    border: 2px solid var(--neutral);
+    text-align: center;
+    flex: 0 0 320px;
+    border-radius: 24px;
+    padding: 35px 40px;
+    background-color: var(--secondary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease,background-color 0.3s ease;
+}
+.profile-card h4,
+.profile-card .contact-item,
+.profile-card a,
+.profile-card i{
+    background-color: transparent;
+}
+.contact-item a {
+    color: var(--tertiary) !important;
+    background-color: transparent;
+}
+.profile-card:hover{
+    border-color: var(--tertiary);
+    box-shadow: 0 0 18px rgba(192, 132, 176, 0.25), 
+                0 0 40px rgba(192, 132, 176, 0.08);
+    background-color: var(--secondary) !important;
 }
