@@ -2,11 +2,11 @@
 
 A modern, responsive portfolio website showcasing my skills, projects, and experience as a Frontend Developer and BCA student. Built with vanilla HTML, CSS, and JavaScript, featuring smooth animations, mobile-first design, and an interactive project carousel.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://kananjn45.github.io/portfolio-website/)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://kananjn45.github.io/Profile/)
 
 ## 🚀 Live Demo
 
-Visit the live website: [kananjn45.github.io/portfolio-website](https://kananjn45.github.io/portfolio-website/)
+Visit the live website: [kananjn45.github.io/profile](https://kananjn45.github.io/Profile/)
 
 ## ✨ Features
 
@@ -60,7 +60,7 @@ portfolio-website/
 
 **Kanan Jain**
 
-- Website: [kananjn45.github.io/portfolio-website](https://kananjn45.github.io/portfolio-website/)
+- Website: [kananjn45.github.io/Profile/](https://kananjn45.github.io/Profile/)
 - Email: kananjn45@gmail.com
 - LinkedIn: [linkedin.com/in/kanan-jain](https://linkedin.com/in/kanan-jain)
 - GitHub: [github.com/kananjn45](https://github.com/kananjn45)
