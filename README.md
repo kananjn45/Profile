@@ -80,6 +80,10 @@ export const firebaseConfig = {
 firebase deploy --only hosting
 ```
 
+Your website is live at:
+- **[https://kanan-at-work.web.app](https://kanan-at-work.web.app)**
+- **[https://kanan-at-work.firebaseapp.com](https://kanan-at-work.firebaseapp.com)**
+
 ---
 
 ## File Structure
