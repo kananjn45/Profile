@@ -1,588 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Great+Vibes&family=Satisfy&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        crossorigin="anonymous">
-    <link rel="icon" href="assets/favicon.ico">
-    <title>Profile ✨🌷</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanan Jain — Developer, Creative Builder & BCA Student</title>
+  <meta name="description"
+    content="Portfolio of Kanan Jain — Building thoughtful web applications, accessible tools, and practical AI solutions. Developer and student based in Delhi.">
 
-<body>
-    <div class="header">
-        <!-- Desktop Top Navigation -->
-        <div class="nav desktop-nav" id="desktop-nav">
-            <h3 class="site-title">KJ</h3>
-            <nav class="nav-links">
-                <a href="#Home" class="nav-link active" data-section="Home">
-                    <span class="nav-indicator"></span>
-                    Home
-                </a>
-                <a href="#About" class="nav-link" data-section="About">
-                    <span class="nav-indicator"></span>
-                    About
-                </a>
-                <a href="#work" class="nav-link" data-section="work">
-                    <span class="nav-indicator"></span>
-                    Work
-                </a>
-                <a href="#contact" class="nav-link" data-section="contact">
-                    <span class="nav-indicator"></span>
-                    Contact
-                </a>
-            </nav>
-            <a href="#contact" class="inquire-btn">Inquire</a>
-        </div>
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 
-        <!-- Mobile Bottom Tab Bar -->
-        <nav class="mobile-tab-bar" id="mobile-tab-bar">
-            <a href="#Home" class="tab-item active" data-section="Home">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </a>
-            <a href="#About" class="tab-item" data-section="About">
-                <i class="fas fa-user"></i>
-                <span>About</span>
-            </a>
-            <a href="#work" class="tab-item" data-section="work">
-                <i class="fas fa-briefcase"></i>
-                <span>Work</span>
-            </a>
-            <a href="#contact" class="tab-item" data-section="contact">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-        </nav>
-        <div class="hero-section content" id="Home">
-            <h3>Kanan Jain</h3>
-            <p>Frontend Developer | Applied AI & Web Development Enthusiast</p>
-            <div class="hero-buttons">
-                <a href="#work" class="btn">EXPLORE WORK</a>
-                <a href="#contact" class="btn">GET IN TOUCH</a>
-            </div>
-        </div>
-    </div>
-    <div class="about-contact-section" id="About">
-        <div class="about-us">
-            <p> I am a BCA student at the Institute of Information Technology and Management, Delhi, with a strong
-                foundation in frontend development and responsive web design. My journey in technology is driven by a
-                passion for creating user-centric web applications and exploring the intersection of modern web
-                interfaces with applied artificial intelligence.<br>
-                With expertise in HTML, CSS, JavaScript, Bootstrap, and Python, I engineer responsive, accessible web
-                solutions while building end-to-end Machine Learning, NLP, and Deep Learning pipelines. I thrive in
-                collaborative environments and love solving real-world challenges through intelligent systems.<br>
-                Currently seeking opportunities as a Frontend Developer Intern or AI / Data & Web Development Intern to
-                contribute to high-impact projects and grow as a software engineer.</p>
-        </div>
-        <div class="profile-card">
-            <h4>Contact Information</h4>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:kananjn45@gmail.com" style="text-decoration: none;">kananjn45@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>+91-8860828246</span>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Delhi, India</span>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-linkedin"></i>
-                <a href="https://linkedin.com/in/kanan-jain" target="_blank" style="text-decoration: none;">LinkedIn
-                    Profile</a>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/kananjn45" target="_blank" style="text-decoration: none;">GitHub Profile</a>
-            </div>
-        </div>
-    </div>
-    <div id="work" class="work">
-        <div class="Skills" id="Skills">
-            <h3>Technical Arsenal</h3>
-            <hr class="border">
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h4>Frontend Development</h4>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h4>Web Technologies</h4>
-                    <ul>
-                        <li>Responsive Design</li>
-                        <li>CSS Grid</li>
-                        <li>Flexbox</li>
-                        <li>Bootstrap</li>
-                        <li>DOM manipulation</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h4>Data & AI</h4>
-                    <ul>
-                        <li>Python</li>
-                        <li>Machine Learning (Scikit-Learn)</li>
-                        <li>Deep Learning (Keras / ANN)</li>
-                        <li>Predictive Modeling & Regression</li>
-                        <li>Data Analysis (Pandas, Seaborn)</li>
-                        <li>Streamlit (ML Web Apps)</li>
-                        <li>AI-assisted Development</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h4>Tools & Platforms</h4>
-                    <ul>
-                        <li>Power BI & DAX</li>
-                        <li>Git & GitHub</li>
-                        <li>VS Code</li>
-                        <li>Netlify & Vercel</li>
-                        <li>Chrome DevTools</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h4>Design Tools</h4>
-                    <ul>
-                        <li>Graphic Design</li>
-                        <li>Digital Asset Creation for Web and Social Media</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h4>Version Control</h4>
-                    <ul>
-                        <li>Git workflows</li>
-                        <li>Branching strategies</li>
-                        <li>Merging</li>
-                        <li>Pull Requests</li>
-                        <li>collaborative Development</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="experience" id="experience">
-            <h3>Experience & Education</h3>
-            <hr class="border">
-            <div class="experience-item">
-                <h4>Summer Trainee - AI Using Python</h4>
-                <span class="edu"><em>ShapeMySkills by DUCAT | June 2026 - August 2026</em></span>
-                <ul>
-                    <li>Completed intensive hands-on training across Python, classical Machine Learning, Deep Neural
-                        Networks
-                        (Keras/ANN), and Power BI business intelligence</li>
-                    <li>Engineered flagship capstone <strong>LegalMind AI</strong> on the CUAD dataset (510
-                        contracts, 41 categories) with TF-IDF + Logistic Regression classification and rule-based
-                        JSON risk assessment</li>
-                    <li>Built deep learning benchmarks using Keras MLP and developed an interactive Streamlit
-                        application, resolving complex Windows multi-Python runtime conflicts (Python 3.14 vs 3.11,
-                        zombie processes)</li>
-                    <li>Produced IEEE SRS-style project synopsis, 4-page Power BI executive dashboard, and comprehensive
-                        project reports</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h4>Graphic Design Intern - Digital & Web Assets</h4>
-                <span>18 December, 2025 - 31 December, 2025</span>
-                <ul>
-                    <li>Creating visual content and marketing materials for non-profit social impact campaigns in
-                        ongoing 2-week internship</li>
-                    <li>Designing web banners, social media graphics, and digital assets optimized for web platforms
-                        using industry-standard design tools</li>
-                    <li>Collaborating with cross-functional team members to deliver professional graphics within tight
-                        project deadlines and brand guidelines</li>
-                </ul>
-            </div>
-            <div class="experience-item education-item">
-                <h4>Bachelor of Computer Applications (BCA)</h4>
-                <span class="edu"><em>Institute of Information Technology and Management, Delhi | 2025 -
-                        2028</em></span>
-                <ul>
-                    <li>First-year student focusing on web technologies, programming fundamentals, data structures, and
-                        algorithms</li>
-                    <li>Core coursework: HTML, CSS, JavaScript, Python, SQL, database management, software engineering
-                    </li>
-                    <li>Building strong foundation in responsive web design, DOM manipulation, and problem-solving
-                        techniques</li>
-                    <li>Actively developing portfolio projects combining frontend development with emerging AI
-                        technologies</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h4>High School Diploma</h4>
-                <span class="edu"><em>Maharaja Agrasen Model School (MAMS), Delhi | 2012-2024</em></span>
-            </div>
-        </div>
-        <div class="summer-training" id="summer-training">
-            <h3>Summer Training & AI Capstones</h3>
-            <hr class="border">
+  <!-- FontAwesome Icons (Clean Vector SVG Icons Only) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous">
 
-            <!-- Training Program Overview Banner -->
-            <div class="training-overview-card">
-                <div class="training-overview-header">
-                    <div class="training-title-badge">
-                        <span class="program-tag">Specialized Training</span>
-                        <h4>"AI Using Python" Summer Training</h4>
-                        <p class="institute-name">ShapeMySkills by DUCAT</p>
-                    </div>
-                    <div class="training-meta-chips">
-                        <div class="meta-chip">
-                            <div>
-                                <span class="chip-label">Program By</span>
-                                <span class="chip-val">ShapeMySkills by DUCAT</span>
-                            </div>
-                        </div>
-                        <div class="meta-chip">
-                            <div>
-                                <span class="chip-label">Core Stack</span>
-                                <span class="chip-val">ML, DL & Power BI</span>
-                            </div>
-                        </div>
-                        <div class="meta-chip">
-                            <div>
-                                <span class="chip-label">Timeline</span>
-                                <span class="chip-val">June 2026 - August 2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="training-description">
-                    An intensive applied AI & Machine Learning training program focused on core Python programming,
-                    classical machine learning pipelines, deep learning neural networks (Keras ANN), and enterprise
-                    Power BI analytical dashboards.
-                </p>
-            </div>
+  <!-- Tailwind CSS CDN with Custom Palette & Dark Mode -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Consolas', 'monospace']
+          },
+          colors: {
+            palette: {
+              linen: '#FEFAF3',
+              blush: '#F6E2E9',
+              sage: '#B8CFB3',
+              moss: '#84A282',
+              forest: '#4D684B',
+              darkest: '#1C241E',
+              secondary: '#4A564C'
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-            <!-- Flagship Capstone Showcase: LegalMind AI -->
-            <div class="capstone-spotlight">
-                <div class="capstone-header">
-                    <div class="capstone-title-wrap">
-                        <div class="capstone-badge">FLAGSHIP CAPSTONE</div>
-                        <h4>LegalMind AI <em class="capstone-sub">- Automated Legal Contract Intelligence & Clause Risk
-                                Analysis</em></h4>
-                        <p class="capstone-dataset">Evaluated on the benchmark
-                            <strong>CUAD Dataset</strong> (510 legal contracts, 41 granular clause categories)
-                        </p>
-                    </div>
-                </div>
+  <!-- React 18, ReactDOM & Babel for Clean In-Browser Rendering -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-                <div class="capstone-body">
-                    <div class="capstone-overview">
-                        <p>
-                            LegalMind AI is an enterprise-focused contract comprehension system engineered to automate
-                            the tedious review of complex commercial contracts. By combining classical machine learning,
-                            deep learning benchmarking (Keras ANN), rule-based risk scoring, and enterprise Power BI
-                            analytics,
-                            the system surfaces hidden liabilities, analyzes clause obligations, and produces
-                            executive-ready intelligence dashboards in seconds.
-                        </p>
-                    </div>
+      <link rel="icon" href="assets/favicon.ico">
 
-                    <h5 class="section-subtitle">Technical Architecture & Engineering Pipeline</h5>
-                    <div class="pipeline-grid">
-                        <div class="pipeline-card">
-                            <h6>Clause Classification</h6>
-                            <p>High-dimensional TF-IDF vectorizer paired with a tuned Logistic Regression classifier to
-                                categorize legal clauses into 41 distinct contractual types with robust recall.</p>
-                        </div>
-                        <div class="pipeline-card">
-                            <h6>Keras Deep Learning Benchmark</h6>
-                            <p>Constructed and benchmarked a feedforward Artificial Neural Network (MLP) in Keras to
-                                evaluate deep learning performance trade-offs against classical ML models.</p>
-                        </div>
-                        <div class="pipeline-card">
-                            <h6>Rule-Based Risk Engine</h6>
-                            <p>Configurable risk assessment engine driven by custom JSON rulesets to flag high-liability
-                                covenants, uncapped damages, and one-sided termination clauses.</p>
-                        </div>
-                        <div class="pipeline-card">
-                            <h6>Extractive Summarization</h6>
-                            <p>Domain-adapted extractive text summarizer isolating operative clauses to furnish
-                                attorneys with rapid, high-signal contract briefs.</p>
-                        </div>
-                        <div class="pipeline-card">
-                            <h6>Power BI Executive Reporting</h6>
-                            <p>Engineered comprehensive multi-page Power BI analytical dashboards integrating DAX
-                                measures to surface clause distribution, risk heatmaps, and dataset metrics.</p>
-                        </div>
-                        <div class="pipeline-card">
-                            <h6>Streamlit App & Systems Engineering</h6>
-                            <p>Interactive Streamlit application engineered to resolve complex Windows multi-Python runtime
-                                conflicts (Python 3.14 vs 3.11, zombie Streamlit processes, and Keras/scikit-learn
-                                co-dependencies).</p>
-                        </div>
-                    </div>
+      <style>
+        /* Base typography smooth anti-aliasing */
+        body {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      </style>
+      </head>
 
-                    <h5 class="section-subtitle">Key Deliverables & Documentation</h5>
-                    <div class="deliverables-grid">
-                        <div class="deliverable-item">
-                            <span><strong>4-Page Power BI Dashboard</strong>: Executive analytics covering clause
-                                distribution, risk heatmaps, and dataset metrics</span>
-                        </div>
-                        <div class="deliverable-item">
-                            <span><strong>IEEE SRS Specification</strong>: Formal software requirements document with
-                                architectural schematics</span>
-                        </div>
-                        <div class="deliverable-item">
-                            <span><strong>Comprehensive Project Reports (.docx)</strong>: Formal prelims,
-                                acknowledgements, methodology, and humanized final reports</span>
-                        </div>
-                        <div class="deliverable-item">
-                            <span><strong>Pitch Deck & Releases</strong>: Professional portfolio presentation deck,
-                                demonstration script, and LinkedIn showcase</span>
-                        </div>
-                    </div>
+      <body class="bg-[#FEFAF3] dark:bg-[#141A15] transition-colors duration-300">
 
-                    <div class="capstone-tech-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">CUAD Dataset</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">Deep Learning (Keras ANN)</span>
-                        <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">Power BI & DAX</span>
-                        <span class="tech-tag">JSON Risk Engine</span>
-                    </div>
+        <!-- Root Container for React App -->
+        <div id="root"></div>
 
-                    <div class="capstone-actions">
-                        <a href="https://github.com/kananjn45/LegalMindAI" target="_blank" class="btn btn-futuristic">VIEW ON GITHUB</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Other Summer Training Portfolio Projects Grid -->
-            <h4 class="subsector-title">Additional Summer Training Projects</h4>
-            <div class="training-projects-grid">
-                <!-- Task Success Regression Analysis (CortexRate AI) -->
-                <div class="training-project-card">
-                    <div class="card-badge">DEEP LEARNING (DL)</div>
-                    <h5>Task Success Regression Analysis <em style="font-size: 0.85em; color: var(--tertiary); font-weight: 500;">(CortexRate AI)</em></h5>
-                    <p class="project-summary">
-                        Predictive regression system leveraging deep feedforward neural network architectures in
-                        Keras/TensorFlow to model complex non-linear feature relationships, attaining an outstanding
-                        benchmark score of <strong>R² ~ 0.95</strong>.
-                    </p>
-                    <ul class="project-bullets">
-                        <li>Engineered end-to-end data preprocessing with automated outlier removal and feature scaling
-                        </li>
-                        <li>Implemented multi-layer ANN with dropout and batch normalization to prevent overfitting</li>
-                        <li>Validated model resilience across cross-validation folds and residual error plots</li>
-                    </ul>
-                    <div class="project-tech-pills">
-                        <span>Python</span>
-                        <span>Keras</span>
-                        <span>TensorFlow</span>
-                        <span>Deep Learning ANN</span>
-                        <span>R² ~ 0.95</span>
-                    </div>
-                    <a href="https://github.com/kananjn45/task-success-regression-analysis" target="_blank" class="btn btn-futuristic">VIEW ON GITHUB</a>
-                </div>
-
-                <!-- Climate Change ML & Data Analysis -->
-                <div class="training-project-card">
-                    <div class="card-badge">MACHINE LEARNING (ML)</div>
-                    <h5>Climate Change ML & Data Analysis</h5>
-                    <p class="project-summary">
-                        Comparative dual-pipeline machine learning system developed on 25 years of Indian climate
-                        datasets (3,120 records), featuring leakage-free feature engineering and rigorous multi-model
-                        benchmarking.
-                    </p>
-                    <ul class="project-bullets">
-                        <li>Benchmarked 6 regression algorithms (Random Forest R² ~ 0.933) and 7 classification models
-                            (Random Forest 78.2% accuracy)</li>
-                        <li>Performed strict feature isolation to prevent target data leakage between rainfall anomalies
-                            and drought categorization</li>
-                        <li>Generated rich exploratory data analysis visualizations (correlation heatmaps, boxplots,
-                            regression plots) using Seaborn and Matplotlib</li>
-                    </ul>
-                    <div class="project-tech-pills">
-                        <span>Python</span>
-                        <span>Scikit-learn</span>
-                        <span>Random Forest</span>
-                        <span>Pandas & Seaborn</span>
-                        <span>R² ~ 0.933</span>
-                    </div>
-                    <a href="https://github.com/kananjn45/Climate-Change-ML-DA" target="_blank" class="btn btn-futuristic">VIEW ON GITHUB</a>
-                </div>
-
-                <!-- Power BI Analytics Dashboard -->
-                <div class="training-project-card">
-                    <div class="card-badge">BUSINESS INTELLIGENCE (POWER BI)</div>
-                    <h5>AI Engineer Regression Analytics</h5>
-                    <p class="project-summary">
-                        Interactive enterprise Power BI analytics dashboard delivering in-depth exploratory data
-                        analysis and feature correlation insights across an AI Engineer regression benchmark dataset.
-                    </p>
-                    <ul class="project-bullets">
-                        <li>Authored advanced DAX calculated columns and conditional measures using dynamic
-                            <code>SWITCH(TRUE())</code> syntax
-                        </li>
-                        <li>Diagnosed and corrected critical ETL pipeline anomalies, including resolving
-                            <code>Sleep_Hours</code> text-import casting issues
-                        </li>
-                        <li>Constructed multi-page interactive visualizations with synchronized cross-filtering and
-                            drill-through capabilities</li>
-                    </ul>
-                    <div class="project-tech-pills">
-                        <span>Power BI</span>
-                        <span>DAX Modeling</span>
-                        <span>SWITCH(TRUE())</span>
-                        <span>ETL Data Cleansing</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="Projects" id="projects">
-            <h3>Projects</h3>
-            <hr class="border">
-            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0"
-                        class="active"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"></button>
-                    <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="glass-card">
-                            <h3>Climate Change ML & Data Analysis <em style="font-size: 0.9em; color: #7d99b8;">-
-                                    Regression & Classification Project</em></h3>
-                            <ul>
-                                <li>Built ML pipelines on 25 years (2000–2025) of Indian climate data across 10 states —
-                                    regression to predict average temperature and classification to predict drought
-                                    conditions</li>
-                                <li>Compared 6 regression models (Linear, Decision Tree, Random Forest, Gradient
-                                    Boosting, SVR, KNN) and 7 classification models (Logistic Regression, Decision Tree,
-                                    Random Forest, Gradient Boosting, SVC, KNN, GaussianNB) using R² and accuracy
-                                    scoring</li>
-                                <li>Performed leakage-aware feature engineering — identified and excluded features that
-                                    would trivially predict the target (e.g., rainfall correlating with drought labels)
-                                    before modeling</li>
-                                <li>Created EDA visualizations (regression plots, boxplots, correlation heatmaps) using
-                                    Seaborn to surface seasonal temperature and rainfall patterns</li>
-                                <li><strong>Tech:</strong> Python, Pandas, Scikit-learn, Seaborn, Matplotlib, Git,
-                                    GitHub</li>
-                            </ul>
-                            <a href="https://github.com/kananjn45/Climate-Change-ML-DA" target="_blank"
-                                class="btn btn-futuristic mt-3">VIEW ON GITHUB</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="glass-card">
-                            <h3>Cognify <em style="font-size: 0.9em; color: #7d99b8;">- AI-Powered Learning
-                                    Companion</em></h3>
-                            <ul>
-                                <li>Built an intelligent learning platform designed as an AI-powered learning companion
-                                    for children with developmental disorders</li>
-                                <li>Implemented real-time adaptive math lessons that adjust visuals, sounds, and pacing
-                                    dynamically based on detected stress levels</li>
-                                <li>Integrated camera-based stress detection system to monitor child's emotional state
-                                    and provide supportive, confidence-building feedback</li>
-                                <li>Designed child-friendly interface focusing on emotional resilience and personalized
-                                    learning growth with accessibility in mind</li>
-                                <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, AI/ML, Camera API, Real-time
-                                    Adaptation, Git, Vercel</li>
-                            </ul>
-                            <a href="https://cognify-fawn.vercel.app/" target="_blank"
-                                class="btn btn-futuristic mt-3">VIEW LIVE DEMO</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="glass-card">
-                            <h3>Book Haven E-Commerce <em style="font-size: 0.9em; color: #7d99b8;">- Online Bookstore
-                                    Frontend</em></h3>
-                            <ul>
-                                <li>Built comprehensive bookstore frontend featuring dynamic catalogue with category
-                                    filtering, search functionality, and intuitive navigation structure</li>
-                                <li>Implemented interactive shopping cart using vanilla JavaScript with add-to-cart
-                                    actions, quantity management, price calculations, and cart persistence</li>
-                                <li>Utilized Bootstrap 5 framework for consistent UI components including responsive
-                                    cards, navigation bars, modals, and form elements with cross-browser compatibility
-                                </li>
-                                <li>Designed mobile-first responsive product layouts ensuring seamless user experience
-                                    from mobile to desktop viewports</li>
-                                <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, Bootstrap 5, Git, Github</li>
-                            </ul>
-                            <a href="https://kananjn45.github.io/book-haven/" target="_blank"
-                                class="btn btn-futuristic mt-3">VIEW LIVE</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="glass-card">
-                            <h3>Sapphire Digital</h3>
-                            <ul>
-                                <li>Developed fully responsive website for digital invitations featuring custom
-                                    navigation with mobile friendly hamburger menu and dedicated pages for static, short
-                                    video, and long video invites</li>
-                                <li>Designed clean grid layouts with pastel color theme prioritizing usability and
-                                    improved mobile experience across all device types</li>
-                                <li>Implemented semantic HTML5 structure with reusable component architecture ensuring
-                                    code maintainability and WCAG accessibility compliance</li>
-                                <li>Deployed live production application with continuous integration from GitHub
-                                    repository</li>
-                                <li><strong>Tech:</strong> HTML5, CSS3, JavaScript, Responsive Design, Git, Netlify</li>
-                            </ul>
-                            <a href="https://sapphire-digital.netlify.app/" target="_blank"
-                                class="btn btn-futuristic mt-3">VIEW LIVE</a>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-        </div>
-
-        <div class="certifications-section">
-            <h4>Certifications</h4>
-            <ul>
-                <li>Introduction to Data Science - <em>Cisco Networking Academy,</em><span> Dec, 2025</span></li>
-                <li>Data Science Essentials with Python - <em>Cisco Networking Academy,</em><span> Dec, 2025</span></li>
-                <li>Cyber Job Simulation - <em>Deloitte Via Forage,</em><span> Oct, 2025</span></li>
-                <li>AI Tools & ChatGPT Workshop - <em>Be10x,</em><span> April,2025</span></li>
-            </ul>
-        </div>
-    </div>
-    <div class="contact" id="contact">
-        <h3>Get in Touch</h3>
-        <hr class="border">
-        <p>Interested in collaborating or discussing opportunities? Let's connect!</p>
-        <div class="contact-section">
-            <a href="mailto:kananjn45@gmail.com" class="btn btn-futuristic mt-3"><i class="fas fa-envelope"></i> SEND
-                EMAIL</a>
-            <a href="https://www.linkedin.com/in/kanan-jain-762785298/" target="_blank"
-                class="btn btn-futuristic mt-3"><i class="fab fa-linkedin"></i> LINKEDIN PROFILE</a>
-            <a href="https://www.instagram.com/enchanted_kanann/" target="_blank" class="btn btn-futuristic mt-3"><i
-                    class="fab fa-instagram"></i> INSTAGRAM PROFILE</a>
-            <a href="https://github.com/kananjn45" target="_blank" class="btn btn-futuristic mt-3"><i
-                    class="fab fa-github"></i> GITHUB PROFILE</a>
-        </div>
-    </div>
-    <div class="footer" style="font-family: sans-serif;">
-        <p>&copy; 2026 KANAN JAIN. ALL RIGHTS RESERVED.</p>
-        <p><em>Crafted with dark passion, ❤️ and lots of ☕</em></p>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+  <!-- React Application Component -->
+  <script type="text/babel" data-type="module" src="app.jsx"></script>
 </body>
 
 </html>

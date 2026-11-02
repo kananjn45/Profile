@@ -1,74 +1,102 @@
-# 🌟 Kanan Jain - Portfolio Website
+# Kanan Jain — Personal Portfolio
 
-A modern, responsive portfolio website showcasing my skills, projects, and experience as a Frontend Developer and BCA student. Built with vanilla HTML, CSS, and JavaScript, featuring smooth animations, mobile-first design, and an interactive project carousel.
-
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://kananjn45.github.io/Profile/)
-
-## 🚀 Live Demo
-
-Visit the live website: [kananjn45.github.io/profile](https://kananjn45.github.io/Profile/)
-
-## ✨ Features
-
-- **Responsive Design** - Fully optimized for all devices (mobile, tablet, desktop)
-- **Interactive Project Carousel** - Swipeable carousel with touch gesture support
-- **Smooth Animations** - Scroll-triggered animations and smooth transitions
-- **Mobile Menu** - Custom ripple-effect hamburger menu for mobile navigation
-- **Scroll-to-Top Button** - Floating button with smooth scroll functionality
-- **Modern UI/UX** - Glass morphism effects, gradient backgrounds, and neon accents
-- **Performance Optimized** - Fast loading with vanilla JavaScript (no heavy frameworks)
-- **Accessible** - Semantic HTML5 and ARIA labels for better accessibility
-
-## 🛠️ Technologies Used
-
-- **HTML5 & CSS3** - Modern semantic layout, custom glassmorphism, animations, and media queries
-- **JavaScript (ES6+)** - Interactive navigation, intersection observers, and responsive UI logic
-- **Bootstrap 5** - Carousel component and responsive layout utilities
-- **Applied AI & ML Stack** - Python, Scikit-learn (Machine Learning), Keras / Deep Neural Networks (ANN), Streamlit, Power BI & DAX
-- **Font Awesome** - Icon library for social links and technical badges
-- **Git & GitHub** - Version control and automated deployment
-
-## 📂 Project Structure
-
-```
-portfolio-website/
-│
-├── index.html          # Main HTML file
-├── style.css           # Complete stylesheet with responsive design
-├── script.js           # JavaScript for interactivity
-├── assets/             # Images and other assets
-└── README.md           # This file
-```
-
-## 🎨 Key Sections
-
-1. **Hero Section** - Eye-catching introduction with CTA buttons
-2. **About Me** - Personal introduction and contact information
-3. **Technical Arsenal** - Technical skills organized by category (Frontend, Data & AI, Tools, Design)
-4. **Experience & Education** - Professional internships, Summer Training ("AI Using Python"), and academic timeline
-5. **Summer Training & AI Capstones** - Specialized showcase for the "AI Using Python" program at ShapeMySkills by DUCAT, featuring flagship capstone **LegalMind AI** (CUAD dataset), **CortexRate AI** (Deep Learning), **Climate Impact ML** (Machine Learning), and **AI Engineer Analytics** (Power BI)
-6. **Projects** - Interactive carousel showcasing web & ML applications
-7. **Certifications** - Cisco, Deloitte, and AI credentials
-8. **Contact** - Social links and direct communication channels
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1024px and above
-- **Tablet**: 768px - 1023px
-- **Mobile**: 480px - 767px
-- **Small Mobile**: 320px - 479px
-
-## 📧 Contact
-
-**Kanan Jain**
-
-- Website: [kananjn45.github.io/Profile/](https://kananjn45.github.io/Profile/)
-- Email: kananjn45@gmail.com
-- LinkedIn: [linkedin.com/in/kanan-jain](https://linkedin.com/in/kanan-jain)
-- GitHub: [github.com/kananjn45](https://github.com/kananjn45)
+A modern, high-craft personal portfolio built with React 18, Tailwind CSS, and Firebase. Designed with organic, human-centered earth tones, flowing and approachable copywriting, and zero unicode emojis.
 
 ---
 
-⭐ **If you found this project helpful, please consider giving it a star!** ⭐
+## Design System & Palette
 
-*Crafted with dark passion, ❤️ and lots of ☕*
+Crafted with natural earth tones inspired by Color Hunt:
+
+- **Base Canvas:** `#FEFAF3` (Warm Alabaster / Linen)
+- **Soft Accent:** `#F6E2E9` (Blush Petal)
+- **Secondary Tone:** `#B8CFB3` (Silky Sage)
+- **Primary Brand Ink:** `#84A282` (Muted Evergreen / Moss) & `#4D684B` (Deep Forest)
+- **High-Contrast Text:** `#1C241E` / `#2C382F`
+- **Typography:** Newsreader (Editorial Serif) + Plus Jakarta Sans (Clean Sans) + JetBrains Mono (Technical Monospace)
+- **Constraint:** Strictly zero unicode emojis. Built with structured typography and minimalist vector icons (FontAwesome).
+
+---
+
+## Key Highlights & Featured Projects
+
+1. **ORCA-Intel — Safe Sea Navigation for Fishermen**
+   - **Role:** Team Leader (BitVerse 404)
+   - **Honor:** Smart India Hackathon 2026 Nominee (ISRO Problem Statement #26176)
+   - **Tech:** Flutter, Python, FastAPI, SQLite, Bhashini Voice AI. 100% works offline with 15-minute advance border warnings.
+
+2. **Awaaz Mobile — Real-Time Sign Language Interpreter**
+   - **Honor:** Top 6 Finalist, Dextrix Hackathon (Feb 2026)
+   - **Tech:** Flutter, MediaPipe 21-point tracking, TensorFlow Lite, Python, Chaquopy. On-device real-time gesture-to-speech.
+
+3. **SETU — Smart Soundbox Assistant for Retailers**
+   - **Honor:** Paytm Build for India Hackathon
+   - **Tech:** Python, Sarvam Voice AI, FastAPI, LangGraph, Vision OCR. Multilingual instant dispute verification under 3 seconds.
+
+4. **Raksha — Zero-Internet Emergency Mesh Network**
+   - **Honor:** Top 15 Finalist, Nexhack (Sept 2026)
+   - **Tech:** Android, BLE 5.0, Wi-Fi Direct, AES-256. Encrypted peer-to-peer phone mesh for emergency dead-zones.
+
+5. **Cognify — Adaptive Learning Companion for Kids**
+   - **Honor:** Matrix Hackathon (April 2026)
+   - **Tech:** React.js, Firebase, OpenCV, Python. Real-time engagement and frustation tracking for neurodivergent learners.
+
+6. **BingeBuddy — Real-Time Watch Party**
+   - **Tech:** React.js, JavaScript, Node.js, Socket.IO, MongoDB. Synchronized video streaming with live chat.
+
+---
+
+## Deploying to a New Firebase Project
+
+To deploy this portfolio to your own Firebase project:
+
+### 1. Install & Log In to Firebase CLI
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+### 2. Connect Your Firebase Project
+```bash
+firebase use --add
+```
+Select your new Firebase project from the list and give it an alias (e.g. `default`).
+
+### 3. (Optional) Connect Realtime Firestore Contact Form
+In `firebase-config.js`, update your Firebase web app configuration:
+```javascript
+export const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "your-project-id.firebaseapp.com",
+  projectId: "your-project-id",
+  storageBucket: "your-project-id.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+```
+
+### 4. Deploy Live
+```bash
+firebase deploy --only hosting
+```
+
+---
+
+## File Structure
+
+```text
+Portfolio/
+├── assets/
+│   ├── favicon.ico
+│   ├── Kanan_Jain_Resume.pdf
+│   ├── orca-architecture.png
+│   ├── profile.png
+│   └── screen.png
+├── app.jsx              # Complete React application with Hero particle system
+├── firebase-config.js   # Firebase configuration & initialization check
+├── firebase.json        # Firebase Hosting & Firestore rules configuration
+├── firestore.rules      # Secure write-only rules for contact inquiries
+├── index.html           # SPA entry point with React, Babel & Tailwind CDN
+├── .gitignore           # Git ignore for local Firebase cache
+└── README.md            # Project documentation
+```
