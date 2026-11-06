@@ -807,50 +807,117 @@ function Experience() {
 }
 
 // ==========================================================================
-// Contact Section with Direct Firebase Backend
+// Contact Section with Direct Gmail & Email Integration
 // ==========================================================================
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
-  const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedDraft, setCopiedDraft] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('kananjn45@gmail.com');
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2500);
+    } catch {
+      const textarea = document.createElement('textarea');
+      textarea.value = 'kananjn45@gmail.com';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2500);
+    }
+  };
+
+  const handleCopyMessage = async (bodyText) => {
+    try {
+      await navigator.clipboard.writeText(bodyText);
+      setCopiedDraft(true);
+      setTimeout(() => setCopiedDraft(false), 2500);
+    } catch {
+      // ignore
+    }
+  };
+
+  const buildEmailData = () => {
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const subject = formData.subject.trim() || `Portfolio Inquiry from ${name}`;
+    const message = formData.message.trim();
+
+    const body = `Hi Kanan,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}\n\n—\nSent via Portfolio Contact Form`;
+    const subjectEncoded = encodeURIComponent(subject);
+    const bodyEncoded = encodeURIComponent(body);
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=kananjn45@gmail.com&su=${subjectEncoded}&body=${bodyEncoded}`;
+    const mailtoUrl = `mailto:kananjn45@gmail.com?subject=${subjectEncoded}&body=${bodyEncoded}`;
+
+    return { name, email, subject, message, body, gmailUrl, mailtoUrl };
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setStatus({ type: 'error', message: 'Please fill out your name, email, and message.' });
       return;
     }
 
-    setLoading(true);
-    setStatus(null);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email.trim())) {
+      setStatus({ type: 'error', message: 'Please provide a valid email address.' });
+      return;
+    }
 
-    const payload = {
-      ...formData,
-      clientTimestamp: new Date().toISOString()
-    };
+    const { body, gmailUrl, mailtoUrl } = buildEmailData();
 
-    try {
-      if (db) {
+    // If live Firestore is configured, write a background backup
+    if (db) {
+      try {
         await addDoc(collection(db, 'inquiries'), {
-          ...payload,
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          subject: formData.subject.trim(),
+          message: formData.message.trim(),
+          clientTimestamp: new Date().toISOString(),
           serverTimestamp: serverTimestamp()
         });
-        setStatus({ type: 'success', message: 'Thank you! Your message has been sent directly to my Firebase inbox. I will get back to you shortly.' });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        const localKey = 'kanan_inquiries_staging';
-        const existing = JSON.parse(localStorage.getItem(localKey) || '[]');
-        existing.push(payload);
-        localStorage.setItem(localKey, JSON.stringify(existing));
-        setStatus({ type: 'success', message: 'Message saved in staging. (Connect live Firestore credentials in firebase-config.js to push live).' });
-        setFormData({ name: '', email: '', subject: '', message: '' });
+      } catch (err) {
+        console.warn('Backup Firestore write notice:', err);
       }
-    } catch (err) {
-      console.error(err);
-      setStatus({ type: 'error', message: 'Unable to send message right now. Feel free to email me directly at kananjn45@gmail.com.' });
-    } finally {
-      setLoading(false);
     }
+
+    // Launch Gmail compose in a new tab
+    window.open(gmailUrl, '_blank');
+
+    setStatus({
+      type: 'success',
+      message: 'Opening Gmail with your message prepared for kananjn45@gmail.com! Review and click Send in Gmail.',
+      gmailUrl,
+      mailtoUrl,
+      body
+    });
+  };
+
+  const handleSendMailto = (e) => {
+    e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setStatus({ type: 'error', message: 'Please fill out your name, email, and message first.' });
+      return;
+    }
+
+    const { body, gmailUrl, mailtoUrl } = buildEmailData();
+    window.location.href = mailtoUrl;
+
+    setStatus({
+      type: 'success',
+      message: 'Launching your default email app with your message addressed to kananjn45@gmail.com.',
+      gmailUrl,
+      mailtoUrl,
+      body
+    });
   };
 
   return (
@@ -872,17 +939,47 @@ function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10">
             
             {/* Direct Info */}
-            <div className="lg:col-span-5 flex flex-col gap-3.5 sm:gap-6 lg:border-r border-[#B8CFB3]/30 dark:border-[#273529] lg:pr-8">
+            <div className="lg:col-span-5 flex flex-col gap-4 sm:gap-6 lg:border-r border-[#B8CFB3]/30 dark:border-[#273529] lg:pr-8">
               <div>
-                <span className="font-mono text-xs text-[#526054] dark:text-[#8E9F90] uppercase block">Email Directly</span>
-                <a href="mailto:kananjn45@gmail.com" className="text-sm font-semibold text-[#1C241E] dark:text-[#F2F6F2] hover:text-[#4D684B]">
+                <span className="font-mono text-xs text-[#526054] dark:text-[#8E9F90] uppercase block mb-1">Email Directly</span>
+                <a 
+                  href="mailto:kananjn45@gmail.com" 
+                  className="text-sm font-semibold text-[#1C241E] dark:text-[#F2F6F2] hover:text-[#4D684B] transition-colors"
+                >
                   kananjn45@gmail.com
                 </a>
+
+                {/* Direct Action Buttons */}
+                <div className="flex flex-wrap items-center gap-2 mt-2.5">
+                  <a 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=kananjn45@gmail.com&su=Project%20Inquiry%20%E2%80%94%20Kanan%20Jain" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#84A282]/15 dark:bg-[#84A282]/25 hover:bg-[#84A282]/30 text-[#2D452B] dark:text-[#C5DDC3] text-xs font-semibold transition-all border border-[#84A282]/30"
+                    title="Open Gmail compose in a new tab"
+                  >
+                    <i className="fa-brands fa-google text-xs"></i>
+                    <span>Open in Gmail</span>
+                    <i className="fas fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+
+                  <button 
+                    type="button"
+                    onClick={handleCopyEmail}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FEFAF3] dark:bg-[#131A14] hover:border-[#84A282] text-xs font-semibold text-[#1C241E] dark:text-[#F2F6F2] transition-all border border-[#B8CFB3]/40 dark:border-[#273529]"
+                    title="Copy email to clipboard"
+                  >
+                    <i className={`fas ${copiedEmail ? 'fa-check text-emerald-600 dark:text-emerald-400' : 'fa-copy text-[#526054] dark:text-[#8E9F90]'}`}></i>
+                    <span>{copiedEmail ? 'Copied!' : 'Copy Email'}</span>
+                  </button>
+                </div>
               </div>
 
               <div>
                 <span className="font-mono text-xs text-[#526054] dark:text-[#8E9F90] uppercase block">Phone</span>
-                <span className="text-sm font-semibold text-[#1C241E] dark:text-[#F2F6F2]">+91-8860828246</span>
+                <a href="tel:+918860828246" className="text-sm font-semibold text-[#1C241E] dark:text-[#F2F6F2] hover:text-[#4D684B] transition-colors">
+                  +91-8860828246
+                </a>
               </div>
 
               <div>
@@ -966,18 +1063,64 @@ function Contact() {
                   ></textarea>
                 </div>
 
-                <button 
-                  type="submit"
-                  disabled={loading}
-                  className="w-full py-2.5 sm:py-3 rounded-xl bg-[#84A282] text-white text-xs font-semibold hover:bg-[#6F8E6D] transition-colors flex items-center justify-center gap-2 shadow-sm"
-                >
-                  <span>{loading ? "Sending..." : "Send Message"}</span>
-                  <i className="fas fa-paper-plane text-xs"></i>
-                </button>
+                {/* Submit Buttons */}
+                <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
+                  <button 
+                    type="submit"
+                    className="flex-1 py-3 px-4 rounded-xl bg-[#84A282] hover:bg-[#6F8E6D] text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm"
+                  >
+                    <i className="fa-brands fa-google text-xs"></i>
+                    <span>Send via Gmail</span>
+                    <i className="fas fa-arrow-up-right-from-square text-[10px] opacity-80"></i>
+                  </button>
+
+                  <button 
+                    type="button"
+                    onClick={handleSendMailto}
+                    className="py-3 px-4 rounded-xl bg-[#FEFAF3] dark:bg-[#131A14] hover:bg-[#B8CFB3]/20 dark:hover:bg-[#273529] border border-[#B8CFB3]/50 dark:border-[#273529] text-xs font-semibold text-[#1C241E] dark:text-[#F2F6F2] transition-colors flex items-center justify-center gap-2"
+                    title="Open device default email application"
+                  >
+                    <i className="fas fa-envelope text-xs text-[#526054] dark:text-[#8E9F90]"></i>
+                    <span>Default Mail App</span>
+                  </button>
+                </div>
 
                 {status && (
-                  <div className={`p-3 rounded-xl text-xs ${status.type === 'success' ? 'bg-[#B8CFB3]/30 text-[#2D452B] dark:text-[#C5DDC3]' : 'bg-rose-100 text-rose-800'}`}>
-                    {status.message}
+                  <div className={`p-4 rounded-xl text-xs space-y-2.5 ${status.type === 'success' ? 'bg-[#B8CFB3]/30 text-[#243A22] dark:text-[#C5DDC3] border border-[#84A282]/40' : 'bg-rose-100 text-rose-800 border border-rose-200'}`}>
+                    <div className="flex items-start gap-2">
+                      <i className={`fas ${status.type === 'success' ? 'fa-circle-check text-[#4D684B] dark:text-[#A3C49D]' : 'fa-triangle-exclamation text-rose-600'} mt-0.5`}></i>
+                      <span className="font-medium leading-relaxed">{status.message}</span>
+                    </div>
+
+                    {status.type === 'success' && status.gmailUrl && (
+                      <div className="pt-2 flex flex-wrap items-center gap-2 border-t border-[#84A282]/20">
+                        <a 
+                          href={status.gmailUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#4D684B] text-white hover:bg-[#3B5139] text-xs font-medium transition-colors shadow-xs"
+                        >
+                          <i className="fa-brands fa-google text-[11px]"></i>
+                          <span>Open Gmail Tab</span>
+                          <i className="fas fa-arrow-up-right-from-square text-[9px] opacity-80"></i>
+                        </a>
+                        <a 
+                          href={status.mailtoUrl}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/70 dark:bg-black/30 hover:bg-white dark:hover:bg-black/50 text-[#1C241E] dark:text-[#F2F6F2] text-xs font-medium transition-colors border border-[#84A282]/30"
+                        >
+                          <i className="fas fa-envelope text-[11px]"></i>
+                          <span>Default Mail App</span>
+                        </a>
+                        <button
+                          type="button"
+                          onClick={() => handleCopyMessage(status.body)}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/70 dark:bg-black/30 hover:bg-white dark:hover:bg-black/50 text-[#1C241E] dark:text-[#F2F6F2] text-xs font-medium transition-colors border border-[#84A282]/30"
+                        >
+                          <i className={`fas ${copiedDraft ? 'fa-check text-emerald-600' : 'fa-copy text-[11px]'}`}></i>
+                          <span>{copiedDraft ? 'Message Copied!' : 'Copy Message Text'}</span>
+                        </button>
+                      </div>
+                    )}
                   </div>
                 )}
               </form>

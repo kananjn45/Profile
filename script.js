@@ -149,31 +149,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         if (db) {
-          // Live Firebase Firestore write
+          // Live Firebase Firestore backup write
           await addDoc(collection(db, 'inquiries'), {
             ...payload,
             serverTimestamp: serverTimestamp()
           });
-
-          statusBox.textContent = 'Thank you. Your message has been recorded directly to the Firestore inquiry registry. I will review it shortly.';
-          statusBox.className = 'form-status success';
-          statusBox.style.display = 'block';
-          inquiryForm.reset();
-        } else {
-          // Local staging fallback
-          const localKey = 'kanan_inquiries_staging';
-          const existing = JSON.parse(localStorage.getItem(localKey) || '[]');
-          existing.push(payload);
-          localStorage.setItem(localKey, JSON.stringify(existing));
-
-          statusBox.innerHTML = `
-            <strong>Inquiry recorded successfully in staging environment.</strong><br>
-            To stream directly to your live database, paste your Firebase project keys into <code>firebase-config.js</code>.
-          `;
-          statusBox.className = 'form-status success';
-          statusBox.style.display = 'block';
-          inquiryForm.reset();
         }
+
+        // Direct email dispatch via Gmail & mailto
+        const subjectEncoded = encodeURIComponent(subject || `Inquiry from ${name}`);
+        const bodyText = `Hi Kanan,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}\n\n—\nSent via Portfolio Contact Form`;
+        const bodyEncoded = encodeURIComponent(bodyText);
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=kananjn45@gmail.com&su=${subjectEncoded}&body=${bodyEncoded}`;
+        const mailtoUrl = `mailto:kananjn45@gmail.com?subject=${subjectEncoded}&body=${bodyEncoded}`;
+
+        window.open(gmailUrl, '_blank');
+
+        statusBox.innerHTML = `
+          <strong>Message Prepared in Gmail!</strong><br>
+          We opened Gmail addressed to kananjn45@gmail.com. If the window did not open, <a href="${gmailUrl}" target="_blank" class="underline font-semibold">click here to open Gmail</a> or <a href="${mailtoUrl}" class="underline font-semibold">send via default mail client</a>.
+        `;
+        statusBox.className = 'form-status success';
+        statusBox.style.display = 'block';
+        inquiryForm.reset();
       } catch (err) {
         console.error('Submission failure:', err);
         statusBox.textContent = 'Transmission encounter: Unable to write to the ledger. You can reach me directly at kananjn45@gmail.com.';
